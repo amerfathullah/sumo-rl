@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on Tue 02 Feb 2021 12:28:48 +08 by Eclipse SUMO netedit Version 1.8.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <output>
+        <output-file value="/home/amerfathullah/Desktop/gambir.net.xml"/>
+    </output>
+
+    <processing>
+        <offset.disable-normalization value="true"/>
+        <lefthand value="true"/>
+    </processing>
+
+    <junctions>
+        <no-turnarounds value="true"/>
+    </junctions>
+
+    <netedit>
+        <route-files value="/home/amerfathullah/Desktop/gambir.rou.xml"/>
+        <TLSPrograms-output value="/home/amerfathullah/Desktop/gambir.tlcs.xml"/>
+    </netedit>
+
+    <report>
+        <aggregate-warnings value="5"/>
+    </report>
+
+</configuration>
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <vType id="normal_car" vClass="passenger" color="0,255,0" width="1.735" length="3.84" latAlignment="center" />
+    <vType id="emergency" vClass="emergency" color="0,0,255" width="2.41" length="7.24">
+        <param key="has.bluelight.device" value="true"/>
+    </vType>
+    <flow id="normal1" type="normal_car" begin="0" end="1000" number="100" from="s_1" to="5_5L" departPos="base" departLane="best" />
+    <flow id="normal2" type="normal_car" begin="0" end="1000" number="100" from="s_1" to="1_1R" departPos="base" departLane="best" />
+    <flow id="normal3" type="normal_car" begin="0" end="1000" number="100" from="s_1" to="1_1L" departPos="base" departLane="best" />
+    <!--<flow id="emergency" type="emergency" begin="0" number="20" probability="0.2" from="s_1" to="5_5L" departPos="base" departLane="best" />-->
+    <flow id="normal4" type="normal_car" begin="0" end="1000" number="100" from="1R_1" to="1_s" departPos="base" departLane="best" />
+    <flow id="normal5" type="normal_car" begin="0" end="1000" number="100" from="1R_1" to="1_2" departPos="base" departLane="best" />
+    <flow id="normal6" type="normal_car" begin="0" end="1000" number="100" from="1R_1" to="1_1L" departPos="base" departLane="best" />
+    <flow id="normal7" type="normal_car" begin="0" end="1000" number="100" from="1L_1" to="1_s" departPos="base" departLane="best" />
+    <flow id="normal8" type="normal_car" begin="0" end="1000" number="100" from="1L_1" to="1_2" departPos="base" departLane="best" />
+    <flow id="normal9" type="normal_car" begin="0" end="1000" number="100" from="1L_1" to="1_1R" departPos="base" departLane="best" />
+    <flow id="normal10" type="normal_car" begin="0" end="1000" number="100" from="2_1" to="1_1R" departPos="base" departLane="best" />
+    <flow id="normal11" type="normal_car" begin="0" end="1000" number="100" from="2_1" to="1_1L" departPos="base" departLane="best" />
+    <flow id="normal12" type="normal_car" begin="0" end="1000" number="100" from="2_1" to="1_s" departPos="base" departLane="best" />
+</routes>

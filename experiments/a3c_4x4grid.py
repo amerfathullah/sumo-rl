@@ -28,6 +28,8 @@ if __name__ == '__main__':
                                                     max_depart_delay=0))
 
     trainer = A3CTrainer(env="4x4grid", config={
+        "num_workers": 12,
+        "num_cpus_per_worker": 1,
         "multiagent": {
             "policies": {
                 '0': (A3CTFPolicy, spaces.Box(low=np.zeros(10), high=np.ones(10)), spaces.Discrete(2), {})
@@ -37,5 +39,10 @@ if __name__ == '__main__':
         "lr": 0.001,
         "no_done_at_end": True
     })
+    i = 0
     while True:
-        print(trainer.train())  # distributed training step
+        trainer.train()  # distributed training step
+        if i % 10 == 0: #save every 10th training iteration
+            checkpoint_path = trainer.save()
+            print(checkpoint_path)
+        i+=1

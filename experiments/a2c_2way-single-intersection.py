@@ -31,3 +31,4 @@ if __name__ == '__main__':
 
     model = A2C(MlpPolicy, env, verbose=1, learning_rate=0.001, lr_schedule='constant')
     model.learn(total_timesteps=100000)
+    model._save_to_file_zip
